@@ -23,6 +23,24 @@ class GigsController < ApplicationController
     end
   end
   
+  def edit
+    
+  end
+  
+  def update
+    if @gig.update(gig_params)
+      redirect_to gig_path(@gig)
+    else
+      render 'edit'
+    end
+  end
+  
+  def destroy
+    @gig.destroy
+    redirect_to root_path
+  end
+    
+
   private
   
   def gig_params

@@ -1,3 +1,10 @@
 <h2><%= @gig.title %></h2>
 <h3><%= @gig.promoter %></h3>
 <p><%= @gig.description %></p>
+
+
+
+
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_gig_path(@gig) %> 
+<%= link_to "Delete", gig_path(@gig), method: :delete, data: {confirm: "Are you sure? "} %> 
