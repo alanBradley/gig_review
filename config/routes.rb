@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  resources :gigs
+  resources :gigs do
+    resources :reviews
+  end
   
   root 'gigs#index'
   
