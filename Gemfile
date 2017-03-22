@@ -24,10 +24,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Added simple form for forms fields
-gem 'simple_form', '~> 3.4'
+gem 'simple_form', '~> 3.1.0' 
 
 # Added boostrap sass for styling
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'bootstrap-sass', '~> 3.3.4.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
