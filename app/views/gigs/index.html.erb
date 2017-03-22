@@ -1,1 +1,6 @@
-I am the index page
+<% @gigs.each do |gig| %>
+  <h2><%= link_to gig.title, gig_path(gig) %></h2>
+<% end %>
+ 
+ <%= link_to "Add Gig", new_gig_path %>
+  
