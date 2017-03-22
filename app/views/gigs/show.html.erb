@@ -3,7 +3,11 @@
 <p><%= @gig.description %></p>
 
 
-
+<div class="col-md-12">
+  <h1> Reviews </h1>
+    <%= render @gig.reviews %>
+    <%= link_to "Add Reviews", new_gig_review_path(@gig), class: "btn-custom" %>
+</div>
 
 <div class="links btn-group">
  <% if user_signed_in? %>
