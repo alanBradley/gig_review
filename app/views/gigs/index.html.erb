@@ -1,5 +1,11 @@
-<% @gigs.each do |gig| %>
-  <h2><%= link_to gig.title, gig_path(gig) %></h2>
+<h1 class="current-category"><%= params[:category] %></h1>
+ 
+<% if @gigs.count == 0 %>
+  <h3>There are no Gigs for the category you have selected</h3>
+<% else %>
+    <% @gigs.each do |gig| %>
+    <h2><%= link_to gig.title, gig_path(gig) %></h2>
+  <% end %>
 <% end %>
 
   
