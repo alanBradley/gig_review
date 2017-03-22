@@ -9,12 +9,14 @@ class GigsController < ApplicationController
   end
   
   def new
-    @gig = Gig.new
+    # @gig = Gig.new
+    @gig = current_user.gig.build
   end
   
   def create
     # @gig = Gig.new(params.require(:gig).permit(:title, :description, :promoter))
-    @gig = Gig.new(gig_params)
+    # @gig = Gig.new(gig_params)
+    @gig = current_user.gig.build(gig_params)
     
     if @gig.save
       redirect_to root_path
